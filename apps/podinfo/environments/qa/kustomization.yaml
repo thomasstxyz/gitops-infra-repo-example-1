@@ -4,6 +4,8 @@ namePrefix: qa-
 namespace: qa-podinfo
 resources:
   - namespace.yaml
-images:
-- name: ghcr.io/stefanprodan/podinfo
-  newTag: 6.3.1
+# images:
+# - name: ghcr.io/stefanprodan/podinfo
+#   newTag: 6.3.1
+patchesStrategicMerge:
+  - promotion/app-version.yaml
