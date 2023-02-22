@@ -22,3 +22,7 @@ flux create kustomization podinfo \
 ```bash
 flux reconcile source git flux-system && flux reconcile kustomization flux-system
 ```
+
+```bash
+    diff <(kustomize build apps/podinfo/base) <(kustomize build apps/podinfo/environments/qa)
+```
