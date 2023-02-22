@@ -2,3 +2,5 @@ bases:
 - ../../base
 namePrefix: qa-
 namespace: qa-podinfo
+resources:
+  - namespace.yaml
