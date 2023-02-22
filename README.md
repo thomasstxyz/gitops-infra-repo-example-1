@@ -8,3 +8,13 @@ flux bootstrap github \
   --path=./clusters/my-cluster \
   --personal
 ```
+
+```bash
+flux create kustomization podinfo \
+  --target-namespace=default \
+  --source=flux-system \
+  --path="./apps/podinfo/base" \
+  --prune=true \
+  --interval=5m \
+  --export >> ./clusters/my-cluster/apps.yaml
+```
