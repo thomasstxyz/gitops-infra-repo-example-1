@@ -18,3 +18,7 @@ flux create kustomization podinfo \
   --interval=5m \
   --export >> ./clusters/my-cluster/apps.yaml
 ```
+
+```bash
+flux reconcile source git flux-system && flux reconcile kustomization flux-system
+```
