@@ -10,4 +10,4 @@ resources:
 patchesStrategicMerge:
   - promotion/app-version.yaml
 patches:
-  - no-promotion/service.yaml
+  - path: no-promotion/service.yaml
