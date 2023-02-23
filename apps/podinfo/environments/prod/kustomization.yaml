@@ -9,4 +9,5 @@ resources:
 #   newTag: 6.3.1
 patchesStrategicMerge:
   - promotion/app-version.yaml
+patches:
   - no-promotion/service.yaml
