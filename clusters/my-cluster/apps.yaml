@@ -12,4 +12,31 @@ spec:
     kind: GitRepository
     name: flux-system
   targetNamespace: qa-podinfo
-
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: staging-podinfo
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./apps/podinfo/environments/staging
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  targetNamespace: staging-podinfo
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: prod-podinfo
+  namespace: flux-system
+spec:
+  interval: 5m0s
+  path: ./apps/podinfo/environments/prod
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  targetNamespace: prod-podinfo
