@@ -10,4 +10,8 @@ resources:
 patchesStrategicMerge:
   - promotion/app-version.yaml
 patches:
-  - path: no-promotion/service.yaml
+  - path: no-promotion/service.patch.yaml
+    target:
+      version: v1
+      kind: Service
+      name: podinfo
