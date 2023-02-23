@@ -1,3 +1,12 @@
 bases:
 - ../../base
 namePrefix: staging-
+namespace: staging-podinfo
+resources:
+  - namespace.yaml
+# images:
+# - name: ghcr.io/stefanprodan/podinfo
+#   newTag: 6.3.1
+patchesStrategicMerge:
+  - promotion/app-version.yaml
+  - no-promotion/service.yaml
