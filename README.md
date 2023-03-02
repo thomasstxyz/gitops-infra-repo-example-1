@@ -1,6 +1,19 @@
 # README
 
 ```bash
+brew install fluxcd/tap/flux
+```
+
+```bash
+export GITHUB_TOKEN=<your-token>
+export GITHUB_USER=<your-username>
+```
+
+```bash
+flux check --pre
+```
+
+```bash
 flux bootstrap github \
   --owner=$GITHUB_USER \
   --repository=gitops-infra-repo-example-1 \
